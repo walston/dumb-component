@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="layout">
+      <header>
+        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
+      </header>
+      <article>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, natus
+          nobis exercitationem asperiores iste illum ullam harum maiores eum
+          quibusdam architecto iusto voluptates nihil. Distinctio porro
+          voluptatem at dolore expedita.
+        </p>
+        <p>
+          Nulla temporibus eveniet eos dolorum quia eius nesciunt quam fugiat
+          necessitatibus nostrum. Veritatis nam dolorum maxime et, distinctio
+          minus consequatur deserunt accusantium iure neque quisquam unde natus
+          possimus. Similique, praesentium!
+        </p>
+        <p>
+          Architecto totam doloribus corporis sapiente cumque! Ducimus
+          perspiciatis qui aperiam, non tenetur similique adipisci minus facere
+          possimus repellat doloremque dolor voluptatum quas nemo dolores ipsum
+          hic maiores rerum cupiditate nostrum.
+        </p>
+        <p>
+          Ex ipsam, soluta voluptatum recusandae eius, at rem, ad repudiandae
+          voluptatibus provident quos fuga. Quasi minus dolor provident,
+          cupiditate placeat repudiandae nulla officiis ut, doloribus ratione
+          fugit, in explicabo ipsum?
+        </p>
+      </article>
+      <aside id="right-rail"></aside>
+    </div>
+    <style>
+      #layout {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: auto 200px;
+        grid-template-rows: 90px auto;
+        grid-template-areas:
+          "header header"
+          "article right-rail";
+      }
+
+      #layout header {
+        grid-area: header;
+      }
+      #layout article {
+        grid-area: article;
+      }
+      #layout #right-rail {
+        grid-area: right-rail;
+      }
+    </style>
+  </body>
+</html>
