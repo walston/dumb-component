@@ -68,5 +68,19 @@
         grid-area: right-rail;
       }
     </style>
+    <script type="text/javascript">
+      const mountComponent = setInterval(() => {
+        try {
+          if (!DumbComponent) throw Error("DumbComponent not loaded");
+
+          const rightRail = document.getElementById("right-rail");
+
+          DumbComponent.render(rightRail);
+          clearInterval(mountComponent);
+        } catch (err) {
+          console.error(err);
+        }
+      }, 200);
+    </script>
   </body>
 </html>
